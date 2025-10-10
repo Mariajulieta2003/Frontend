@@ -1,3 +1,5 @@
+//PIE DE PAGINA
+
 import React from 'react'
 
 export default function Footer(){

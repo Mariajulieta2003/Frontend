@@ -1,22 +1,28 @@
-import React from 'react'
+//BARRA DE NAVEGACION COMUN
+// Implementa los enlaces principales (Mascotas, Veterinario, Iniciar Sesión, etc.).
 
-export default function Header() {
-  return (
-    <header className="header">
-      <div className="container header-inner">
-        <div className="logo">Adopción <span>de</span> Mascotas</div>
-        <nav className="nav">
-          <a href="#">USUARIO</a>
-          <a href="#">MASCOTAS</a>
-          <a href="#">VETERINARIO</a>
-          <a href="#">FAVORITOS</a>
-          <a href="#">CONSULTA</a>
-        </nav>
-        <div className="auth">
-          <button className="btn ghost">Iniciar sesión</button>
-          <button className="btn primary">Crear cuenta</button>
-        </div>
-      </div>
-    </header>
-  )
-}
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/Header.css';
+
+const Header = () => {
+    return (
+        <header className="main-header">
+            <div className="logo">
+                <Link to="/">ADOPCIÓN DE MASCOTAS 🐾</Link>
+            </div>
+            <nav className="nav-menu">
+                <Link to="/">MASCOTAS (VER LISTA)</Link>
+                <Link to="/publish" className="btn-primary">PUBLICAR</Link>
+                <Link to="/veterinary">VETERINARIO (CONSULTA)</Link>
+                <Link to="/plans">PLANES</Link>
+            </nav>
+            <div className="auth-buttons">
+                <Link to="/login">INICIAR SESIÓN</Link>
+                <Link to="/register" className="btn-secondary">CREAR CUENTA</Link>
+            </div>
+        </header>
+    );
+};
+
+export default Header;
