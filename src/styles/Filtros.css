@@ -1,0 +1,67 @@
+/* src/styles/Filtros.css */
+
+.filtros-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Para que se adapte en móviles */
+  gap: 20px;
+  background: var(--color-white);
+  /* Usa variables del index.css */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  /* Usa variables del index.css */
+  margin-bottom: 30px;
+  align-items: flex-end;
+  /* Alinea los inputs y el botón */
+}
+
+.filtro-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* Ocupa espacio disponible */
+  min-width: 200px;
+  /* Ancho mínimo */
+}
+
+.filtro-item label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  /* Usa variables del index.css */
+  margin-bottom: 8px;
+}
+
+.filtro-item input,
+.filtro-item select {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  /* Usa variables del index.css */
+  border-radius: 8px;
+  font-family: 'Nunito', sans-serif;
+  /* Usa la fuente amigable */
+  background: var(--color-secondary);
+  /* Usa variables del index.css */
+}
+
+.filtro-boton {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  background: var(--color-primary);
+  /* Usa variables del index.css */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 48px;
+  /* Misma altura que los inputs */
+}
+
+.filtro-boton:hover {
+  background: var(--color-primary-dark);
+  /* Usa variables del index.css */
+}

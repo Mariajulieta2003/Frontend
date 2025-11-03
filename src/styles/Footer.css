@@ -1,0 +1,30 @@
+.footer {
+  background-color: #222;
+  color: var(--text-light);
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 24px auto;
+}
+
+.footer__content h4 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.footer__content p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}

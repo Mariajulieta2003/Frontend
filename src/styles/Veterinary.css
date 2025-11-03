@@ -1,0 +1,31 @@
+.veterinary-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.veterinary-container p {
+  margin: 20px auto;
+  max-width: 520px;
+  color: #555;
+}
+
+.veterinary-container button {
+  font-size: 1.1rem;
+  padding: 15px 30px;
+}
+
+.veterinary-tips {
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.veterinary-tips ul {
+  list-style: disc;
+  margin: 20px auto;
+  padding-left: 20px;
+  text-align: left;
+  max-width: 420px;
+}
