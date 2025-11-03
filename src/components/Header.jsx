@@ -1,28 +1,36 @@
-//BARRA DE NAVEGACION COMUN
-// Implementa los enlaces principales (Mascotas, Veterinario, Iniciar Sesión, etc.).
+// src/components/Header.jsx (Corregido)
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Header.css';
+
+// --- CORRECCIÓN AQUÍ: Añadimos .jsx ---
+import Navbar from './Navbar.jsx'; 
+import AuthButtons from './AuthButtons.jsx'; // <-- El error estaba aquí
+// ------------------------------------
+
+import '../styles/Header.css'; // Los CSS no necesitan la extensión
 
 const Header = () => {
-    return (
-        <header className="main-header">
-            <div className="logo">
-                <Link to="/">ADOPCIÓN DE MASCOTAS 🐾</Link>
-            </div>
-            <nav className="nav-menu">
-                <Link to="/">MASCOTAS (VER LISTA)</Link>
-                <Link to="/publish" className="btn-primary">PUBLICAR</Link>
-                <Link to="/veterinary">VETERINARIO (CONSULTA)</Link>
-                <Link to="/plans">PLANES</Link>
-            </nav>
-            <div className="auth-buttons">
-                <Link to="/login">INICIAR SESIÓN</Link>
-                <Link to="/register" className="btn-secondary">CREAR CUENTA</Link>
-            </div>
-        </header>
-    );
+  return (
+    <header className="main-header">
+      <div className="header-content">
+
+        {/* Logo o Título de la Aplicación */}
+        <div className="header-brand">
+          <Link to="/">
+            ADOPCIÓN DE MASCOTAS 🐾
+          </Link>
+        </div>
+
+        {/* Componente de Navegación */}
+        <Navbar />
+
+        {/* Componente de Botones de Autenticación */}
+        <AuthButtons />
+
+      </div>
+    </header>
+  );
 };
 
 export default Header;
