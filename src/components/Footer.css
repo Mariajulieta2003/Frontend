@@ -1,0 +1,112 @@
+/* src/components/Footer.css */
+
+.footer {
+  /* CAMBIO: Fondo del color del header */
+  background-color: var(--color-primary);
+  color: #eee;
+  /* Texto claro por defecto */
+  padding: 3rem 2rem 1rem;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* Para que se vea bien en móviles */
+  max-width: 1100px;
+  margin: 0 auto 2rem auto;
+  gap: 2rem;
+}
+
+.footer-logo {
+  flex: 2;
+  /* Ocupa más espacio */
+  min-width: 250px;
+}
+
+.footer-logo a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #eee;
+  /* CAMBIO: Texto más claro */
+}
+
+.footer-links,
+.footer-social {
+  flex: 1;
+  /* Ocupan 1 parte cada uno */
+  min-width: 150px;
+}
+
+.footer h4 {
+  color: var(--color-text-light);
+  /* Blanco */
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--color-text-light);
+  /* CAMBIO: Texto blanco */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  /* Mantenemos el acento verde, pero más claro si es necesario */
+  /* Si el verde no resalta, puedes usar var(--color-text-light) y 'text-decoration: underline' */
+  color: var(--color-accent);
+}
+
+.social-icons a {
+  color: var(--color-text-light);
+  /* CAMBIO: Texto blanco */
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--color-accent);
+}
+
+.footer-bottom {
+  text-align: center;
+  /* CAMBIO: Borde más oscuro del color primario */
+  border-top: 1px solid var(--color-primary-dark);
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #eee;
+  /* CAMBIO: Texto más claro */
+}
+
+/* Responsividad para el footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-bottom: 2rem;
+  }
+}
