@@ -1,0 +1,146 @@
+.myReqPage {
+  max-width: 1100px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+  color: #1f2937;
+}
+
+.pageTitle {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.pageSubtitle {
+  color: #6b7280;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.reqFilters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.filterBtn {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.filterBtn.active {
+  background: #00a884;
+  color: #fff;
+  border-color: #00a884;
+}
+
+.reqCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 16px;
+}
+
+.reqCard {
+  display: flex;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #f1f3f5;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  transition: 0.2s ease;
+}
+
+.reqCard:hover {
+  transform: translateY(-3px);
+}
+
+.petThumb img {
+  width: 85px;
+  height: 85px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.reqInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.reqHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statusBadge {
+  font-size: 13px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.statusBadge.pendiente {
+  background: #fff5d6;
+  color: #8a6700;
+}
+
+.statusBadge.aprobada {
+  background: #dff8e6;
+  color: #067d13;
+}
+
+.statusBadge.rechazada {
+  background: #ffe4e6;
+  color: #b91c1c;
+}
+
+.reqShelter {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.reqMsg {
+  font-style: italic;
+  margin: 6px 0;
+}
+
+.reqFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn.ghost {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 6px 10px;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn.ghost:hover {
+  background: #f3f4f6;
+}
+
+.emptyState {
+  text-align: center;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  margin-top: 40px;
+  color: #6b7280;
+}

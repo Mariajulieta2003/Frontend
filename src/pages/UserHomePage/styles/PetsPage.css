@@ -1,0 +1,355 @@
+:root {
+  --brand: #00A884;
+  --brand-ink: #076a58;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --bg: #f7f8fa;
+  --card: #fff;
+  --shadow: 0 8px 22px rgba(0, 0, 0, .08);
+  --shadow-hover: 0 12px 28px rgba(0, 0, 0, .12);
+  --radius: 16px;
+}
+
+/* CONTENEDOR */
+.ml-container {
+  max-width: 1200px;
+  margin: 18px auto 32px;
+  padding: 0 20px;
+}
+
+/* HERO */
+.ml-hero {
+  background: linear-gradient(180deg, #ffffff, #f1faf6);
+  border: 1px solid #e6e6e6;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 18px 18px 14px;
+  margin-bottom: 16px;
+}
+
+.ml-hero-title {
+  font-size: 26px;
+  margin: 0 0 4px;
+}
+
+.ml-hero-sub {
+  margin: 0;
+  color: var(--muted);
+}
+
+.ml-hero-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.ml-hero-input,
+.ml-hero-select {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 8px 12px;
+  min-width: 230px;
+  outline: none;
+  height: 36px;
+  /* compacta */
+  line-height: 1;
+}
+
+/* Botón principal (hero) y primario reutilizable */
+.ml-hero-btn,
+.ml-btn-primary {
+  background: var(--brand);
+  color: #fff;
+  border: 1px solid #059377;
+  border-radius: 10px;
+  padding: 9px 14px;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+  line-height: 1;
+}
+
+.ml-hero-btn:hover,
+.ml-btn-primary:hover {
+  background: #05a07f;
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+
+.ml-hero-btn:active,
+.ml-btn-primary:active {
+  transform: translateY(0);
+}
+
+.ml-hero-btn[disabled],
+.ml-btn-primary[disabled] {
+  opacity: .65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.ml-hero-hint {
+  margin-top: 6px;
+  color: var(--brand-ink);
+  font-size: 13px;
+}
+
+/* TOPBAR */
+.ml-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0 8px;
+  /* un toque más compacta */
+}
+
+.ml-breadcrumb {
+  display: flex;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.ml-bullet {
+  opacity: .5;
+}
+
+.ml-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.ml-results {
+  color: #374151;
+}
+
+.ml-select {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 8px 12px;
+  height: 36px;
+  /* altura pareja */
+}
+
+/* FILTROS (más bajo y chato) */
+.ml-filters {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  gap: 14px;
+  align-items: end;
+  margin: 10px 0;
+}
+
+.ml-field label,
+.ml-facets-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+  color: #23453b;
+}
+
+.ml-field select,
+.ml-field input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 8px 10px;
+  height: 36px;
+  /* más chato */
+  line-height: 1;
+}
+
+.ml-facets {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 8px 10px;
+  /* menos padding */
+}
+
+.ml-facets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 8px;
+  /* compacto */
+}
+
+.ml-checkbox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #374151;
+  background: #f8fbfa;
+  /* chip sutil */
+  border: 1px solid #e6f3ef;
+  border-radius: 10px;
+  padding: 6px 8px;
+  /* chato */
+}
+
+.ml-clear {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 8px 12px;
+  height: 36px;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* SEARCH BAND */
+.ml-searchband {
+  margin: 6px 0 12px;
+}
+
+.ml-searchband .w-full input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 8px 12px;
+  height: 36px;
+  line-height: 1;
+}
+
+/* LISTADO */
+.ml-list {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.ml-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+}
+
+.ml-thumb {
+  display: block;
+  position: relative;
+  background: #f6f6f6;
+}
+
+.ml-thumb img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  transition: transform .18s ease;
+}
+
+.ml-card:hover img {
+  transform: scale(1.02);
+}
+
+.ml-info {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ml-title {
+  font-weight: 800;
+  color: #111827;
+  text-decoration: none;
+}
+
+.ml-title:hover {
+  color: var(--brand-ink);
+}
+
+.ml-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ml-badge {
+  background: #eef5ff;
+  border: 1px solid #d7e6ff;
+  color: #21528f;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ml-badge.ml-free {
+  background: #dbf7e1;
+  border-color: #c1efe3;
+  color: #0a7d12;
+}
+
+.ml-desc {
+  color: #4b5563;
+  font-size: 14px;
+  margin: 2px 0 6px;
+}
+
+.ml-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.ml-cta {
+  margin-top: 6px;
+}
+
+/* Botón dentro de la tarjeta con estilo principal (igual al hero) */
+.ml-card .ml-btn {
+  background: var(--brand);
+  color: #fff;
+  border: 1px solid #059377;
+  border-radius: 10px;
+  padding: 9px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+  line-height: 1;
+}
+
+.ml-card .ml-btn:hover {
+  background: #05a07f;
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+
+/* EMPTY */
+.ml-empty {
+  grid-column: 1/-1;
+  text-align: center;
+  background: #fff;
+  border: 1px dashed #e6e6e6;
+  border-radius: 14px;
+  padding: 32px;
+}
+
+/* RESPONSIVE */
+@media (max-width:720px) {
+  .ml-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .ml-topbar {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+}

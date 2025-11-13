@@ -1,0 +1,90 @@
+:root {
+  --brand: #00c4a5;
+}
+
+.registerRoot {
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.registerCard {
+  width: 420px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.346);
+}
+
+.registerTitle {
+  color:rgb(0, 196, 165 );
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.registerLabel {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgb(51, 68, 64);
+}
+
+.registerInput,
+.registerSelect {
+  width: 100%;
+  padding: .8rem 1rem;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #cfdddb;
+  margin-top: .25rem;
+  outline: none;
+}
+
+.registerInput.inputSuccess {
+  border-color: var(--brand);
+}
+
+.registerInput.inputError {
+  border-color: #ff5b5b;
+}
+
+.registerBtnSubmit {
+  width: 100%;
+  padding: .9rem 1rem;
+  border-radius: 10px;
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  margin-top: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.registerBtnSubmit:hover {
+  filter: brightness(.95);
+}
+
+.registerLoginLink {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.registerLink {
+  color: var(--brand);
+  font-weight: 600;
+}
+
+.validationIcon {
+  margin-left: .5rem;
+  color: var(--brand);
+}
+
+.errorMessage {
+  color: #d6002e;
+  font-size: .8rem;
+  margin-top: .2rem;
+}

@@ -1,0 +1,169 @@
+:root {
+  --brand: #00c4a5;
+}
+
+.mpForm {
+  padding: 1.5rem;
+  border: 1px solid #e9eef3;
+  border-radius: 14px;
+}
+
+.card {
+  background: linear-gradient(135deg, #1d2939, #111827);
+  color: #fff;
+  border-radius: 14px;
+  padding: 1rem 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chip {
+  width: 40px;
+  height: 28px;
+  background: linear-gradient(#f0c27b, #4b1248);
+  border-radius: 6px;
+  opacity: .8;
+}
+
+.networks {
+  display: flex;
+  gap: .4rem;
+}
+
+.net {
+  font-size: .7rem;
+  background: #ffffff22;
+  padding: .2rem .4rem;
+  border-radius: 6px;
+}
+
+.net-visa {}
+
+.net-mc {}
+
+.net-am {}
+
+.cardNumber {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .5px;
+  font-size: 1.2rem;
+  margin: .6rem 0;
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: .85rem;
+  opacity: .9;
+}
+
+.fieldRow {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  margin: .7rem 0;
+}
+
+.fieldRow label {
+  font-weight: 700;
+  color: #374151;
+}
+
+.fieldRow input,
+.fieldRow select {
+  border: 1px solid #cfd6dd;
+  border-radius: 10px;
+  padding: .7rem .9rem;
+  outline: none;
+  background: #fff;
+}
+
+.fieldRow input:focus,
+.fieldRow select:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px #00c4a522;
+}
+
+.twoCols,
+.threeCols {
+  display: grid;
+  gap: .8rem;
+}
+
+.twoCols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.threeCols {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.docRow {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: .6rem;
+}
+
+.expRow {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.expRow input {
+  width: 60px;
+  text-align: center;
+}
+
+.payBtn {
+  width: 100%;
+  padding: .9rem;
+  border: none;
+  color: #fff;
+  background: var(--brand);
+  border-radius: 12px;
+  font-weight: 800;
+  margin-top: .8rem;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.payBtn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.payBtn:hover:not(:disabled) {
+  filter: brightness(.95);
+}
+
+/* ==== ICONOS TARJETAS EN COLOR ==== */
+.net-icon {
+  width: 42px;
+  height: 28px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 6px;
+}
+
+/* VISA */
+.net-visa {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCA2NCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTkuOTQ0NyAwSDExLjUyNTJMMTEuMjk3NiAxLjA2ODNDMTAuNDEyNyAxLjkxNjA1IDguNzM4MzIgMy40OTg1MyA1LjkzOTcxIDQuOTMzNDZMMTQuMjYzNyAwSDE5Ljk0NDdaIiBmaWxsPSIjMDA1M0NDIi8+PHBhdGggZD0iTTI4LjA2NCAyMEwzNS4zNDE4IDBIMzguNjI3M0wzMi43Njc1IDIwSDI4LjA2NFoiIGZpbGw9IiMwMDUzQ0MiLz48cGF0aCBkPSJNNDUuOTYxNyAyMEg0MS4zMzcyTDM3LjM5MjkgMEg0MS44MDE3TDM5LjU3NDggMjBINDUuOTYxN1oiIGZpbGw9IiMwMDUzQ0MiLz48cGF0aCBkPSJNNjMuOTMyOCAwSDU2LjY1NjJMMzYuNTQzNCAyMEg0My44NDQ0TDU5Ljg4NzUgMi45NDgxM0M2MS42NDk1IDEuOTYyOTUgNjIuOTQ0NiAwLjg2NjY5NSA2My45MzI4IDBIMzYuNTQzNEw2My45MzI4IDBaIiBmaWxsPSIjMDA1M0NDIi8+PC9zdmc+");
+}
+
+/* MASTERCARD */
+.net-mc {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjMwIiB2aWV3Qm94PSIwIDAgNjQgMzAiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnL3N2ZyI+PHBhdGggZD0iTTY0IDE1YzAgOC4yODctNi43MTMgMTUtMTUgMTVzLTE1LTYuNzEzLTE1LTE1YzAtOC4yODcgNi43MTMtMTUgMTUtMTVzMTUgNi43MTMgMTUgMTV6IiBmaWxsPSIjRkYwMDAwIi8+PHBhdGggZD0iTTAgMTVjMC04LjI4NyA2LjcxMy0xNSAxNS0xNXMxNSA2LjcxMyAxNSAxNWMwIDguMjg3LTYuNzEzIDE1LTE1IDE1UzAgMjMuMjg3IDAgMTV6IiBmaWxsPSIjRkY1MDAwIi8+PHBhdGggZD0iTTIzIDE1YzAgNS41MjMgMi43MjMgMTAuMzc1IDYuODY5IDEzLjM3N0MxNy4xOTIgMjkuMzYzIDEzLjY0NiAyMy4xNTYgMTMuNjQ2IDE1YzAtOC4xNTYgMy41NDYtMTQuMzYzIDguMjI0LTEzLjM3N0MyNS43MjMgNC42MjUgMjMgOS40NzYgMjMgMTV6IiBmaWxsPSIjRkY5MDAwIi8+PC9zdmc+");
+}
+
+/* AMERICAN EXPRESS */
+.net-am {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgNjQgMTgiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnL3N2ZyI+PHJlY3QgZmlsbD0iIzAwQjVGRiIgaGVpZ2h0PSIxOCIgd2lkdGg9IjY0Ii8+PHBhdGggZD0iTTQgMTZMMTYgMlYxNkg0Wk0yMCAxNkwzMCAyVjE2SDIwWk0zNCAxNkw0NCAyVjE2SDM0Wk00OCAxNkw1OCAyVjE2SDQ4WiIgZmlsbD0iI0ZGRiIvPjwvc3ZnPg==");
+}
