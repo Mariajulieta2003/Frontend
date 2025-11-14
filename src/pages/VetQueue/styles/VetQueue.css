@@ -1,0 +1,269 @@
+.vetQueue {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 16px 80px;
+}
+
+.vq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.vq-header h1 {
+  font-size: 1.9rem;
+  margin-bottom: 6px;
+}
+
+.vq-header p {
+  color: #4b5563;
+}
+
+.vq-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.vq-pill {
+  background: #10b981;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.vq-pill.ghost {
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+}
+
+/* Tabs de filtros */
+.vq-filters {
+  display: inline-flex;
+  border-radius: 999px;
+  background: #ecfdf5;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.vq-tab {
+  border: none;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.vq-tab.active {
+  background: #10b981;
+  color: #fff;
+}
+
+/* Lista y tarjetas */
+.vq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.vq-empty {
+  padding: 24px;
+  border-radius: 16px;
+  background: #f9fafb;
+  text-align: center;
+  color: #6b7280;
+}
+
+.vq-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 10px 30px rgba(15, 118, 110, 0.08);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vq-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.vq-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.vq-chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.vq-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.vq-time {
+  font-size: 0.78rem;
+}
+
+.vq-urgency {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+.vq-urgency-alta {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.vq-urgency-media {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.vq-urgency-baja {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.vq-reason {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.vq-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.vq-status {
+  font-size: 0.78rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.badge-pending {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.badge-in_progress {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.badge-done {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.vq-btn-row {
+  display: flex;
+  gap: 8px;
+}
+
+.vq-btn-primary,
+.vq-btn-secondary {
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+}
+
+.vq-btn-primary {
+  background: #10b981;
+  color: #fff;
+}
+
+.vq-btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+.vq-btn-secondary {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.vq-btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+/* Detalle overlay */
+.vq-detailOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 40;
+}
+
+.vq-detailCard {
+  background: #fff;
+  padding: 20px 22px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 20px 50px rgba(15, 118, 110, 0.3);
+}
+
+.vq-detailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.vq-close {
+  border: none;
+  background: transparent;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.vq-detailLine {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.vq-detailActions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .vq-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .vq-badges {
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,62 @@
+:root {
+  --brand: #00c4a5;
+}
+
+.summaryCard {
+  border: 1px solid #e9eef3;
+  border-radius: 14px;
+  padding: 1.2rem 1.2rem 1.4rem;
+}
+
+.summaryTitle {
+  font-weight: 800;
+  color: #111;
+  margin-bottom: .6rem;
+}
+
+.sumRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.sumPlan {
+  font-weight: 700;
+  color: #111;
+}
+
+.sumDesc {
+  color: #4b5563;
+  font-size: .9rem;
+}
+
+.sumPrice {
+  font-weight: 800;
+  color: #111;
+}
+
+.divider {
+  height: 1px;
+  background: #eef2f7;
+  margin: .9rem 0;
+}
+
+.sumLine,
+.sumTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .35rem 0;
+}
+
+.sumTotal {
+  font-weight: 900;
+  color: #111;
+  font-size: 1.05rem;
+}
+
+.sumInfo {
+  margin-top: .9rem;
+  font-size: .85rem;
+  color: #51606f;
+}

@@ -1,0 +1,276 @@
+/* ===========================
+   CONTENEDOR GENERAL
+   =========================== */
+.mvc-root {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: var(--font, "Inter", sans-serif);
+  color: #1f2937;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+.mvc-header h1 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.mvc-header p {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   FILTROS
+   =========================== */
+.mvc-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.mvc-filterBtn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 0.9rem;
+}
+
+.mvc-filterBtn:hover {
+  background: #f3f4f6;
+}
+
+.mvc-filterBtn.active {
+  background: #23c17a;
+  color: white;
+  border-color: #23c17a;
+}
+
+/* ===========================
+   LISTA DE CONSULTAS
+   =========================== */
+.mvc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mvc-empty {
+  padding: 40px 0;
+  text-align: center;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* ===========================
+   CARD DE CONSULTA
+   =========================== */
+.mvc-card {
+  background: white;
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  transition: 0.2s;
+}
+
+.mvc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Header interno */
+.mvc-cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.mvc-cardHeader h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.mvc-chip {
+  display: inline-block;
+  background: #e5f9f0;
+  color: #047857;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+.mvc-meta {
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+.mvc-meta time {
+  display: block;
+  color: #6b7280;
+}
+
+/* Urgencias */
+.mvc-urgency {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.mvc-urgency-alta {
+  background: #dc2626;
+}
+
+.mvc-urgency-media {
+  background: #f59e0b;
+}
+
+.mvc-urgency-baja {
+  background: #10b981;
+}
+
+/* Descripción */
+.mvc-symptoms {
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+  color: #374151;
+}
+
+/* ===========================
+   STATUS & BOTÓN VER DETALLE
+   =========================== */
+.mvc-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estado */
+.mvc-status {
+  font-weight: 600;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+
+.mvc-status-pendiente {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.mvc-status-en_progreso {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.mvc-status-resuelta {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.mvc-status-cancelada {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Botón */
+.mvc-moreBtn {
+  padding: 6px 14px;
+  background: #23c17a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 0.9rem;
+}
+
+.mvc-moreBtn:hover {
+  background: #1ea56a;
+}
+
+/* ===========================
+   MODAL DE DETALLE
+   =========================== */
+.mvc-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.mvc-modal {
+  background: white;
+  width: 90%;
+  max-width: 480px;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.mvc-modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mvc-modalHeader h2 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.mvc-close {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.mvc-detailBlock {
+  margin: 14px 0;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Botón cerrar */
+.mvc-btnPrimary {
+  width: 100%;
+  background: #23c17a;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.mvc-btnPrimary:hover {
+  background: #1b9c62;
+}
+
+/* ===========================
+   ERRORES
+   =========================== */
+.mvc-error {
+  color: #dc2626;
+  margin-bottom: 10px;
+}

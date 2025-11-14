@@ -1,0 +1,221 @@
+/* =================================
+   1. VARIABLES GLOBALES
+   ================================= */
+:root {
+  --color-primary: #00a896;
+  --color-primary-dark: #007a6e;
+  --color-accent: #2ecc71;
+  --color-accent-dark: #27ae60;
+  --color-text: #333333;
+  --color-text-light: #ffffff;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f7f8f5;
+  --font-body: 'Nunito', sans-serif;
+  --radius-m: 16px;
+  --radius-pill: 50px;
+  --shadow-m: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --shadow-l: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --nav-height: 72px;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =================================
+   2. GLOBAL BODY FIX
+   ================================= */
+body {
+  background-color: var(--color-bg-alt) !important;
+  /* Fondo natural */
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--color-text);
+  padding-top: var(--navbar-height);
+  /* evita que tape navbar */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  color: var(--color-primary-dark);
+}
+
+/* =================================
+   3. NAVBAR
+   ================================= */
+.navbar {
+  background-color: var(--color-primary);
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--navbar-height);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--color-text-light);
+  font-weight: 700;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.nav-links a.active {
+  color: var(--color-accent);
+  border-bottom: 3px solid var(--color-accent);
+  border-radius: 0;
+}
+
+/* Botones navbar */
+.nav-auth {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary-nav {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+}
+
+.btn-primary-nav:hover {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+}
+
+.btn-secondary-nav {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-secondary-nav:hover {
+  background-color: white;
+  color: var(--color-primary);
+}
+
+/* =================================
+   4. HERO SECTION
+   ================================= */
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  height: calc(90vh - var(--navbar-height));
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 2rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* =================================
+   5. PAGE SECTIONS
+   ================================= */
+.page-section {
+  padding: 5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--color-bg-alt);
+}
+
+.page-section:nth-of-type(even) {
+  background: #ffffff;
+}
+
+/* =================================
+   6. CARDS
+   ================================= */
+.card {
+  background: white;
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-l);
+  padding: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* =================================
+   7. RESPONSIVE
+   ================================= */
+@media (max-width: 768px) {
+  :root {
+      --nav-height: 96px;
+    }
+  .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0 1rem;
+    height: 60px;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+}
+
+.nav-spacer {
+  height: calc(var(--nav-height) + 12px);
+  /* +12px de respiración */
+}
+
+/* Si tu navbar es fixed, aseguramos que quede arriba de todo */
+nav.navbar,
+header.navbar,
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}

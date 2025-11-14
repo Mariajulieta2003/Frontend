@@ -1,0 +1,334 @@
+:root {
+  --brand: #00A884;
+  /* verde marca */
+  --brand-ink: #006451;
+  --ink: #222;
+  --muted: #666;
+  --bg: #f7f8fa;
+  --card: #fff;
+  --shadow: 0 8px 22px rgba(0, 0, 0, .08);
+  --shadow-hover: 0 12px 28px rgba(0, 0, 0, .12);
+  --radius: 14px;
+  --header-height: 64px;
+  /* alto aprox. de tu navbar */
+}
+
+/* PAGE */
+.petsContainer {
+  max-width: 1200px;
+  margin: 28px auto 40px;
+  padding: 0 20px;
+}
+
+/* empuja el contenido para que no lo tape el navbar */
+.pagePadTop {
+  padding-top: calc(var(--header-height) * 0.9 + 20px);
+}
+
+.pageTitle {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.pageSubtitle {
+  color: #666;
+  margin-top: 4px;
+}
+
+/* HEADER (fila: título + botón) */
+.mypetsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+/* si usás título+botón como header de sección */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 10px 0 14px;
+  flex-wrap: wrap;
+}
+
+.mlBtnPrimary {
+  background: var(--brand);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  transition: .15s ease;
+  white-space: nowrap;
+}
+
+.mlBtnPrimary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* TABS + SEARCH */
+.toolbarRow {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tabBtn.active {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px #00a8841f;
+}
+
+.pill {
+  background: #efefef;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+.pill.green {
+  background: #dbf7e1;
+  color: #08790d;
+}
+
+.pill.yellow {
+  background: #fff0cc;
+  color: #8b6500;
+}
+
+.pill.gray {
+  background: #ececec;
+  color: #555;
+}
+
+.searchBox {
+  min-width: 260px;
+  flex: 1;
+  max-width: 360px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+
+.searchBox input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* GRID */
+.petsGrid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 6px;
+  /* evita que el grid toque el header */
+}
+
+/* CARD */
+.petCard {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: .18s ease;
+  position: relative;
+}
+
+.petCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* IMAGE */
+.petImgWrapper {
+  position: relative;
+  background: #fafafa;
+}
+
+.petImgWrapper img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.imgSkeleton {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  background: linear-gradient(90deg, #f2f2f2, #eaeaea, #f2f2f2);
+  animation: sheen 1.3s infinite linear;
+}
+
+@keyframes sheen {
+  0% {
+    background-position: -200px 0;
+  }
+
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+/* RIBBON (estado) */
+.ribbon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  backdrop-filter: blur(6px);
+}
+
+.ribbon.published {
+  background: #dff8e6;
+  color: #0a7d12;
+  border: 1px solid #b7ecc3;
+}
+
+.ribbon.paused {
+  background: #fff2cc;
+  color: #8c6000;
+  border: 1px solid #ffe299;
+}
+
+.ribbon.draft {
+  background: #f0f0f0;
+  color: #555;
+  border: 1px solid #e6e6e6;
+}
+
+/* INFO (franja inferior limpia, blanca) */
+.petInfo {
+  background: #fff;
+  padding: 14px 16px;
+  color: #222;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.petName {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 4px 0;
+}
+
+.chip {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e7fbf5;
+  color: var(--brand-ink);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid #c1efe3;
+}
+
+.petDesc {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 6px 0 14px;
+}
+
+/* ACCIONES (ghost) */
+.actionsRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: .15s ease;
+}
+
+.btn.ghost {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+}
+
+.btn.ghost:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+  transform: translateY(-1px);
+}
+
+.btn.info {
+  color: #0b6bd6;
+  border-color: #d6e7ff;
+}
+
+.btn.success {
+  color: #08790d;
+  border-color: #cfeeda;
+}
+
+.btn.warn {
+  color: #a17200;
+  border-color: #ffe7b0;
+}
+
+.btn.danger {
+  color: #c21a1a;
+  border-color: #f4d1d1;
+}
+
+/* EMPTY STATE */
+.emptyState {
+  text-align: center;
+  background: #fff;
+  border: 1px dashed #e6e6e6;
+  border-radius: 14px;
+  padding: 40px;
+  margin-top: 8px;
+}
+
+.emptyState h2 {
+  margin: 0 0 6px;
+}

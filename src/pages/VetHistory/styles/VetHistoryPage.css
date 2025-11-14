@@ -1,0 +1,14 @@
+.vh-root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.vh-empty {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #f3f4f6;
+  border-radius: 12px;
+  text-align: center;
+  color: #6b7280;
+}
